@@ -7,7 +7,7 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
     <Box
       as="li"
       display="flex"
-      width="320px"
+      width="302px"
       alignItems="center"
       mr="auto"
       mb="8px"
