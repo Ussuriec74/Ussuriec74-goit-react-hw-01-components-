@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const TransactionTable = styled.table`
   width: ${p => p.theme.space[9]}px;
   margin: 0 auto;
@@ -20,7 +21,11 @@ export const TableBody = styled.tbody`
   color: ${p => p.theme.colors.secondaryText};
   background-color: ${p => p.theme.colors.white};
 `;
-export const TableBodyRow = styled.tr``;
+export const TableBodyRow = styled.tr`
+  &:nth-child(even) {
+    background-color: #F1F2F2;
+  };
+`;
 
 export const TableBodyColumn = styled.th`
   text-align: center;
