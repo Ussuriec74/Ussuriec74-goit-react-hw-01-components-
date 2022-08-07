@@ -10,7 +10,7 @@ import {
 } from 'components/transactionHistory/TransactionHistory.styled';
 
 
-export const TransactionHistory = ({ items }) {
+export const TransactionHistory = ({ items }) => {
   return (
     <TransactionTable>
       <TableHead>
