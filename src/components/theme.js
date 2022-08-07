@@ -9,7 +9,7 @@ export const theme = {
     primaryText: '#000000',
     secondaryText: '#BCBEC0',
   },
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
+  space: [0, 2, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: {
     xs: '12px',
     s: '14px',
