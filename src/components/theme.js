@@ -3,6 +3,7 @@ export const theme = {
     white: '#ffffff',
     green: 'green',
     red: 'red',
+    bgTableHead: '#51EAFF',
     bgBody: '#D1D3D4',
     bgStats: '#F1F2F2',
     primaryText: '#000000',
