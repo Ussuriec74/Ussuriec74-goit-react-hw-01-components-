@@ -8,10 +8,10 @@ export const Statistics = ({title, stats }) => {
       {title && <StatsTitle>{title}</StatsTitle>}
 
       <Box as="ul" display="flex" alignItems="center">
-        {stats.map(item => (
-          <StatsItem key={item.id}>
-            <StatsItemlabel>{item.label}</StatsItemlabel>
-            <StatsItemValue>{item.percentage}%</StatsItemValue>
+        {stats.map(({id, label, percentage}) => (
+          <StatsItem key={id}>
+            <StatsItemlabel>{label}</StatsItemlabel>
+            <StatsItemValue>{percentage}%</StatsItemValue>
           </StatsItem>
         ))}
       </Box>

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { Box } from '../Box';
-import { Stats } from '../stats/Stats';
+import { Stats } from 'components/stats/Stats';
 import { ProfileWrapper, DescriptionWrapper, Avatar, UserName, UserInfo } from './Profile.styled';
 
-export const Profile = ({ profile: { username, tag, location, avatar, stats: { followers, views, likes } } }) => {
+export const Profile = ({profile: { username, tag, location, avatar, stats }}) => {
   return (
     <ProfileWrapper>
       <DescriptionWrapper>
@@ -18,9 +18,9 @@ export const Profile = ({ profile: { username, tag, location, avatar, stats: { f
       </DescriptionWrapper>
 
       <Box display="flex">
-        <Stats label={`Followers`} quantity={followers} />
-        <Stats label={`Views`} quantity={views} />
-        <Stats label={`Likes`} quantity={likes} />
+        <Stats label={`Followers`} quantity={stats.followers} />
+        <Stats label={`Views`} quantity={stats.views} />
+        <Stats label={`Likes`} quantity={stats.likes} />
       </Box>
     </ProfileWrapper>
   )
@@ -32,7 +32,7 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    stats: PropTypes.exact({
+    stats: PropTypes.shape({
       followers: PropTypes.number.isRequired,
       views: PropTypes.number.isRequired,
       likes: PropTypes.number.isRequired
