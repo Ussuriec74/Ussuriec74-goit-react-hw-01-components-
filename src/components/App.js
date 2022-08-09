@@ -8,11 +8,12 @@ import { TransactionHistory } from 'components/transactionHistory/TransactionHis
 import transactions from '../data/transactions.json';
 import { Box } from 'components/Box';
 
+const { username, tag, location, avatar, stats } = profile;
 
 export const App = () => {
   return (
     <Box>
-      <Profile profile={profile} />
+      <Profile username={username} tag={tag} location={location} avatar={avatar} stats={stats} />
       <Statistics title="Upload stats" stats={data} />
       {/* <Statistics stats={data} /> */}
       <FriendList friends={friends} />
